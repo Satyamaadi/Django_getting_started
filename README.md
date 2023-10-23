@@ -1,0 +1,1 @@
+# Django_getting_started
