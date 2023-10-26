@@ -7,6 +7,17 @@
 <body>
 <h1>Welcome to Meeting Planner!</h1>
 <p>This is a demo app.</p>
-There are currently {{n_users}} users in database.
+There are currently {{n_meets}} users in database.
+
+<h2>Meetings</h2>
+<ul>
+    {% for meeting in meetings %}
+    <li>
+        <a href="{% url 'detail' meeting.id %}">
+            {{meeting.title}}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
 </body>
 </html>

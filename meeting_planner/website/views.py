@@ -7,7 +7,8 @@ from meetings.models import Meeting
 
 def welcome(request):
     return render(request, 'website/welcome.html',
-                  {"n_users": Meeting.objects.count()})  # multiple vars can be given using commas
+                  {"n_meets": Meeting.objects.count(),
+                   "meetings": Meeting.objects.all()})  # multiple vars can be given using commas
 
 
 def get_time(request):
