@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Meeting Planner</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
 <h1>Welcome to Meeting Planner!</h1>
 <p>This is a demo app.</p>
 There are currently {{n_meets}} users in database.
 
+<img src="{% static 'website/profile_image.jpeg' %}" width="100px"/>
 <h2>Meetings</h2>
 <ul>
     {% for meeting in meetings %}
@@ -19,5 +17,4 @@ There are currently {{n_meets}} users in database.
     </li>
     {% endfor %}
 </ul>
-</body>
-</html>
+{% endblock %}
